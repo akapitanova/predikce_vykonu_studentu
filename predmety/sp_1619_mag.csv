@@ -1,0 +1,14 @@
+role,kod_predmetu,nazev_predmetu,rozsah_vyuky,zakonceni,semestr,pocet_kreditu,vyucujici,katedra,doporuceny_semestr
+PP,MI-PAA,Problémy a algoritmy,2P+1R+1C,"Z,ZK",Z,5,,18103,1
+PP,MI-MPI,Matematika pro informatiku,3P+2C,"Z,ZK",Z,7,,18105,1
+PS,MI-EVY.16,Efektivní vyhledávání v textech,2P+1C,"Z,ZK",Z,5,,18101,1
+PO,MI-SYP.16,Syntaktická analýza a překladače,2P+1C,"Z,ZK",Z,5,,18101,1
+PP,MI-PDP.16,Paralelní a distribuované programování,2P+2C,"Z,ZK",L,5,,18104,2
+PP,MI-SPI.16,Statistika pro informatiku,4P+2C,"Z,ZK",L,7,,18105,2
+PO,MI-FLP,Funkcionální a logické programování,2P+1C,"Z,ZK",L,4,,18101,2
+PS,MI-KOD.16,Komprese dat,2P+1C,"Z,ZK",L,5,,18101,2
+PZ,MI-GEN,Generování kódu,2P+1C,"Z,ZK",L,4,,18101,2
+PP,MI-MPR,Magisterský projekt,,Z,"Z,L",7,,18000,3
+PZ,MI-RUN.16,Runtime systémy,2P+1C,"Z,ZK",Z,5,,18101,3
+PZ,MI-BPR.16,Bezpečnost a bezpečné programování,2P+1C,"Z,ZK",Z,5,,18104,3
+PP,MI-DIP,Magisterská práce,,Z,"L,Z",23,,18000,4

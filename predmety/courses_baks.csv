@@ -1,0 +1,23 @@
+role,kod_predmetu,nazev_predmetu,rozsah_vyuky,zakonceni,semestr,pocet_kreditu,vyucujici,katedra,doporuceny_semestr
+PP,BI-PA1,Programování a algoritmizace 1,2P+2R+2C,"Z,ZK",Z,6,"Balík M., Vogel J.",18101,1.0
+PP,BI-PAI,Právo a informatika,2P,ZK,Z,3,Kučera Z.,18102,1.0
+PP,BI-CAO,Číslicové a analogové obvody,2P+2C,"Z,ZK",Z,5,"Řezníček J., Kohlík M., Novotný M.",18103,1.0
+PP,BI-PS1,Programování v shellu 1,2P+2C,KZ,Z,5,"Muzikář Z., Trdlička J.",18104,1.0
+PP,BI-MLO,Matematická logika,2P+1C,"Z,ZK",Z,5,"Starý J., Trlifajová K.",18105,1.0
+PP,BI-ZMA,Základy matematické analýzy,3P+2C,"Z,ZK",Z,6,"Kalvoda T., Petr I.",18105,1.0
+PP,BI-PA2,Programování a algoritmizace 2,2P+1R+2C,"Z,ZK",L,7,"Trávníček J., Vagner L.",18101,2.0
+PP,BI-DBS,Databázové systémy,2P+2R+1L,"Z,ZK","Z,L",6,Hunka J.,18102,2.0
+PP,BI-SAP,Struktura a architektura počítačů,2P+1R+2C,"Z,ZK",L,6,,18103,2.0
+PP,BI-LIN,Lineární algebra,4P+2C,"Z,ZK",L,7,"Dombek D., Kleprlík L.",18105,2.0
+PP,BI-AG1,Algoritmy a grafy 1,2P+2C,"Z,ZK",Z,6,"Knop D., Valla T.",18101,3.0
+PP,BI-AAG,Automaty a gramatiky,2P+2C,"Z,ZK",Z,6,"Holub J., Janoušek J.",18101,3.0
+PP,BI-ZDM,Základy diskrétní matematiky,2P+2C,"Z,ZK",Z,5,"Kleprlík L., Kolář J., Scholtzová J.",18105,3.0
+PP,BI-OSY,Operační systémy,2P+1R+1L,"Z,ZK",L,5,Trdlička J.,18104,4.0
+PP,BI-PSI,Počítačové sítě,2P+1R+1C,"Z,ZK",L,5,"Černý V., Fesl J., Kubalík P., Smotlacha V., Trofimova Y.",18104,4.0
+PP,BI-BEZ,Bezpečnost,2P+2C,"Z,ZK",L,6,"Buček J., Lórencz R.",18106,4.0
+PP,BI-BPR,Bakalářský projekt,,Z,"Z,L",2,,18000,5.0
+PP,BI-PST,Pravděpodobnost a statistika,2P+1R+1C,"Z,ZK",Z,5,Novák P.,18105,5.0
+PP,BI-BAP,Bakalářská práce,,Z,"L,Z",14,,18000,6.0
+PP,BI-DPR,"Dokumentace, prezentace, rétorika",2P+2C,KZ,"Z,L",4,"Guth O., Vynikarová D.",18102,6.0
+PP,BI-SI1.2,Softwarové inženýrství I,2P+1C,"Z,ZK","Z,L",5,"Kroha P., Mlejnek J.",18102,7.0
+PE,BI-EMP,Ekonomické a manažerské principy,2P+2C,KZ,"Z,L",4,Buchtela D.,18102,7.0

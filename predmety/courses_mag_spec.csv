@@ -1,0 +1,55 @@
+role,kod_predmetu,nazev_predmetu,rozsah_vyuky,zakonceni,semestr,pocet_kreditu,vyucujici,katedra
+PP,MI-PAA,Problémy a algoritmy,2P+1R+1C,"Z,ZK",Z,5,,18103
+PP,MI-MPI,Matematika pro informatiku,3P+2C,"Z,ZK",Z,7,,18105
+PS,MI-EVY.16,Efektivní vyhledávání v textech,2P+1C,"Z,ZK",Z,5,,18101
+PO,MI-SYP.16,Syntaktická analýza a překladače,2P+1C,"Z,ZK",Z,5,,18101
+PP,MI-PDP.16,Paralelní a distribuované programování,2P+2C,"Z,ZK",L,5,,18104
+PP,MI-SPI.16,Statistika pro informatiku,4P+2C,"Z,ZK",L,7,,18105
+PO,MI-FLP,Funkcionální a logické programování,2P+1C,"Z,ZK",L,4,,18101
+PS,MI-KOD.16,Komprese dat,2P+1C,"Z,ZK",L,5,,18101
+PZ,MI-GEN,Generování kódu,2P+1C,"Z,ZK",L,4,,18101
+PP,MI-MPR,Magisterský projekt,,Z,"Z,L",7,,18000
+PZ,MI-RUN.16,Runtime systémy,2P+1C,"Z,ZK",Z,5,,18101
+PZ,MI-BPR.16,Bezpečnost a bezpečné programování,2P+1C,"Z,ZK",Z,5,,18104
+PP,MI-DIP,Magisterská práce,,Z,"L,Z",23,,18000
+PZ,MI-AVY,Automaty ve vyhledávání v textech,2P+1C,"Z,ZK",L,4,"Žďárek J., Guth O., Pecka T., Plachý Š., Polách R., Trávníček J.",18101
+PZ,MI-PAL,Pokročilá algoritmizace,2P+1C,"Z,ZK",L,4,,18101
+PS,MI-NON.16,Nelineární optimalizace a numerické metody,2P+1C,"Z,ZK",Z,5,,18101
+PO,MI-MVI.16,Metody výpočetní inteligence,2P+1C,"Z,ZK",Z,5,,18105
+PZ,MI-CPX,Teorie složitosti,3P+1C,"Z,ZK",Z,5,,18101
+PO,MI-MTI.16,Moderní technologie Internetu,2P+1C,"Z,ZK",Z,5,,18104
+PO,MI-REV.16,Reverzní inženýrství,1P+2C,"Z,ZK",Z,5,,18106
+PO,MI-HWB.16,Hardwarová bezpečnost,2P+2C,"Z,ZK",L,5,,18106
+PO,MI-MKY.16,Matematika pro kryptologii,3P+1C,"Z,ZK",L,5,,18106
+PO,MI-SYB.16,Systémová bezpečnost,2P+2C,"Z,ZK",L,5,,18106
+PO,MI-KRY.16,Pokročilá kryptologie,2P+2C,"Z,ZK",Z,5,,18106
+PO,MI-SIB.16,Síťová bezpečnost,2P+1C,"Z,ZK","Z,L",5,"Čejka T., Fornůsek S.",18106
+PO,MI-MDW.16,Webové služby a middleware,2P+1C,"Z,ZK",Z,5,,18102
+PO,MI-PAP.16,Paralelní architektury počítačů,2P+1C,"Z,ZK",L,5,,18104
+PO,MI-POA.16,Pokročilé architektury počítačových systémů,2P+1C,"Z,ZK",L,5,,18104
+PO,MI-DSV.16,Distribuované systémy a výpočty,2P+1C,"Z,ZK",Z,5,,18104
+PO,MI-VMM.16,Vyhledávání v multimédiích,2P+1C,"Z,ZK",Z,5,,18102
+PO,MI-PDD.16,Předzpracování dat,2P+1C,"Z,ZK",Z,5,,18105
+PO,MI-DDW.16,Dolování dat z webu,2P+1C,"Z,ZK",L,5,,18102
+PO,MI-ADM.16,Algoritmy data miningu,2P+1C,"Z,ZK",L,5,,18105
+PO,MI-PDB.16,Pokročilé databázové systémy,2P+1C,"Z,ZK",Z,5,,18102
+PO,MI-EDW.16,Podnikové datové sklady,2P+1C,"Z,ZK",L,5,,18105
+PO,MI-UMI,Umělá inteligence,2P+1C,"Z,ZK",Z,5,,18105
+PZ,MI-MEP.16,Modelování ekonomických procesů,2P+1C,"Z,ZK",Z,5,,18102
+PZ,MI-MBI.16,Řízení podnikové informatiky,3P+1C,"Z,ZK",L,5,,18102
+PZ,MI-PIS.16,Pokročilé informační systémy,2P+1C,"Z,ZK",L,5,,18102
+PZ,MI-PCM.16,Projektové a změnové řízení,1P+2C,KZ,"Z,L",3,,18102
+PO,MI-TES.16,Teorie systémů,2P+1C,"Z,ZK",Z,5,,18103
+PZ,MI-SMI.16,Strategické řízení informatiky,3P+1C,"Z,ZK",Z,5,Pavlíčková P.,18102
+PZ,MI-ADP.16,Architektonické a návrhové vzory,2P+1C,"Z,ZK",Z,5,,18102
+PZ,MI-FME.16,Formální metody a specifikace,2P+1C,"Z,ZK",L,5,,18102
+PZ,MI-NSS.16,Normalized Software Systems,2P,ZK,L,5,,18102
+PZ,MI-NUR.16,Návrh uživatelského rozhraní,2P+1C,"Z,ZK",Z,5,,18102
+PZ,MI-W20.16,Web 2.0,2P+1C,"Z,ZK",L,5,,18102
+PZ,MI-SWE.16,Semantický web,2P+1C,"Z,ZK",Z,5,Klímek J.,18102
+PO,MI-NFA.16,Návrh obvodů technologií FPGA a ASIC,2P+1C,"Z,ZK",Z,5,,18103
+PO,MI-SIM.16,Simulace číslicových obvodů,2P+1C,"Z,ZK","L,Z",5,,18103
+PO,MI-BHW.16,Bezpečnost a technické prostředky,2P+2C,"Z,ZK",L,5,,18103
+PO,MI-BKO.16,Bezpečnostní kódy,2P+1C,"Z,ZK",L,5,,18103
+PO,MI-SOC.16,Systémy na čipu,2P+1C,"Z,ZK",Z,5,,18103
+PO,MI-TSP.16,Testování a spolehlivost,2P+2C,"Z,ZK",Z,5,,18103

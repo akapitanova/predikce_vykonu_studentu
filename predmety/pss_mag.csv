@@ -1,0 +1,14 @@
+role,kod_predmetu,nazev_predmetu,rozsah_vyuky,zakonceni,semestr,pocet_kreditu,vyucujici,katedra,doporuceny_semestr
+PP,MI-PAA,Problémy a algoritmy,2P+1R+1C,"Z,ZK",Z,5,,18103,1
+PP,MI-MPI,Matematika pro informatiku,3P+2C,"Z,ZK",Z,7,,18105,1
+PO,MI-MDW.16,Webové služby a middleware,2P+1C,"Z,ZK",Z,5,,18102,1
+PO,MI-MTI.16,Moderní technologie Internetu,2P+1C,"Z,ZK",Z,5,,18104,1
+PP,MI-PDP.16,Paralelní a distribuované programování,2P+2C,"Z,ZK",L,5,,18104,2
+PP,MI-SPI.16,Statistika pro informatiku,4P+2C,"Z,ZK",L,7,,18105,2
+PO,MI-PAP.16,Paralelní architektury počítačů,2P+1C,"Z,ZK",L,5,,18104,2
+PO,MI-POA.16,Pokročilé architektury počítačových systémů,2P+1C,"Z,ZK",L,5,,18104,2
+PO,MI-SYB.16,Systémová bezpečnost,2P+2C,"Z,ZK",L,5,,18106,2
+PP,MI-MPR,Magisterský projekt,,Z,"Z,L",7,,18000,3
+PO,MI-DSV.16,Distribuované systémy a výpočty,2P+1C,"Z,ZK",Z,5,,18104,3
+PO,MI-SIB.16,Síťová bezpečnost,2P+1C,"Z,ZK","Z,L",5,"Čejka T., Fornůsek S.",18106,3
+PP,MI-DIP,Magisterská práce,,Z,"L,Z",23,,18000,4
