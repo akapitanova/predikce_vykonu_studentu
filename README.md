@@ -7,3 +7,11 @@ FIT disponuje daty o studijních výkonech studentů za posledních 11 let. Tato
 4) V případě uspokojivých výsledků řešení automatizujte (např. predikce 1x týdně) a výsledky zpřístupněte konkrétní skupině uživatelů prostřednictvím webového portálu.
 5) Diskutujte znovu použití/zobecnění modelů i v následujících letech při zvážení nové akreditace BI. 
 
+## Grafy 
+
+## Preprocessing
+
+## Predikce_uspechu_studia_bakalar
+
+## Predikce_znamky_PPpredemtu
+* Ještě není hotové
