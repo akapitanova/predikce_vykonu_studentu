@@ -1,0 +1,680 @@
+.loginPage
+{
+	background-position: center top;
+	background-attachment: fixed;
+	background-image: url(../../Images/pocitac.png);
+	background-repeat: no-repeat;
+}
+
+DIV.panelProNavigaci
+{
+	width: 100%;
+	color: darkblue;
+	font-weight: bold;
+	background-color: #87CEFA;
+	vertical-align: middle;
+	text-align: left;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #368AE6;
+	border-bottom-color: #368AE6;
+}
+
+.linkNaNadAgendu
+{
+	font-size: 12pt;
+}
+
+SPAN.nadpisNadAgendouNazev
+{
+	font-size: 14pt;
+	left: 20px;
+	position: relative;
+}
+
+.divPanelProDoplnkovyFormular
+{
+	width: 100%;
+	background-color: #87CEFA;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #368AE6;
+	border-bottom-color: #368AE6;
+}
+
+.divPanelProInformacniFormular
+{
+	width: 100%;
+}
+
+.DivInfoONas
+{
+	position: absolute;
+	top: 0;
+	right: 5px;
+}
+
+.AInfoONas
+{
+	color: navy;
+	font-weight: normal;
+	font-size: x-small;
+}
+
+.labelNadpisMensi
+{
+	font-weight: bold;
+}
+
+.horniMenuSeznamAkci
+{
+	background-image: url(../../images/agendaX.jpg);
+	background-repeat:repeat-x;
+	margin:0px;
+	padding:0px;
+	cursor: hand;
+}
+
+DIV.panelProBaseMenu
+{
+	background-repeat: repeat-x;
+}
+
+
+.horniMenuSeznamAkci input{
+	cursor: hand;
+}
+
+.inputProHorniMenu 
+{
+	 background-color: Red;
+}
+
+.prvni_radek_uver
+{
+	color: #ff0000;
+	font-weight: bold;
+}
+
+.panelTreeView
+{
+	width: 200px;
+	height: 300px;
+	overflow: auto;
+	font-family: Arial Narrow;
+	font-size: 80%;
+	
+}
+
+.treeview
+{
+	
+}
+
+.hid
+{
+	visibility: hidden;
+}
+
+.moula
+{
+	width: 200px;
+}
+
+.inputProHorniMenuLeve
+{
+}
+
+.placeMenuLeftGrid
+{
+	width: 200px;
+
+}
+
+.hlavniTextChyby
+{
+	font-weight: bold;
+	color: #ff0033;
+}
+
+.navigationBar
+{
+	background-image: url(../../Images/PodHeader.gif);
+}
+
+.podrobnyPopisChyby
+{
+	background-color: #ffffcc;
+}
+
+.tmavy_text
+{
+	color: darkblue;
+}
+
+.bonitasoucet tr td
+{
+	border: solid 1px darkblue;
+}
+
+img.SipkaRazeni
+{
+	cursor: hand;
+	height: 12px;
+}
+/*
+select:focus, input:focus
+{
+	background-color: Aqua;
+}
+*/
+body
+{
+	color: darkblue;
+	font-size: 12px;
+	font-family: Verdana;
+	background-color: aliceblue;
+}
+
+body.reportRozhodnutiTimes
+{
+	font-size: 12pt;
+	font-family: 'Times New Roman';
+	color: black;
+	background-color: #ffffff;
+}
+
+body.reportRozhodnutiArial
+{
+	font-size: 10pt;
+	font-family: Arial, 'Times New Roman';
+	color: black;
+	background-color: #ffffff;
+}
+
+div.reportRozhodnutiArial
+{
+	font-size: 10pt;
+	font-family: Arial, 'Times New Roman';
+	color: black;
+	background-color: #ffffff;
+}
+
+p.reportNadpisBold
+{
+	font-weight: bold;
+	text-align: center;
+}
+
+p.reportNadpisBold14
+{
+	font-size: 14pt;
+	font-weight: bold;
+	text-align: center;
+}
+
+p.reportVycentrovany
+{
+	text-align: center;
+}
+
+p.reportVetsiRadkovani
+{
+	line-height: 150%;
+}
+
+p.reportOdsazenyOdstavec
+{
+	text-indent: 20pt;
+}
+
+span.reportOdsazenyOdrazky
+{
+	left: 114px;
+	position: relative;
+	text-indent: 0pt;
+}
+
+p.reportOdsazenyOdrazky
+{
+	page-break-inside: avoid;
+	left: 60px;
+	width:92%;
+	position: relative;
+}
+
+td.reportOdsazenyOdrazky
+{
+	text-align: left;
+	vertical-align: top;
+	page-break-inside: avoid;
+}
+
+table.treportOdsazenyOdrazky
+{
+	page-break-inside: avoid;
+}
+
+
+p.reportOdsazenyOdrazky2
+{
+	left: 180px;
+	position: relative;
+}
+
+
+p.reportVlevoZarovnany
+{
+	text-align: right;
+}
+
+body.StrankaBezOkraje
+{
+	margin: 0px;
+}
+
+p
+{
+	page-break-inside: avoid;
+}
+
+table.tablePageAfter
+{
+	page-break-after: always;
+}
+/*
+span
+{
+	font-size: 12px;
+	font-family: Verdana;
+}
+*/
+div
+{
+	font-size: 12px;
+/*	font-family: Verdana;*/
+}
+
+textarea
+{
+	font-size: 12px;
+}
+
+div.divF16
+{
+	font-size: 16px;
+}
+
+a
+{
+	text-decoration: none;
+	font-size: 12px;
+/*	font-family: Verdana;*/
+}
+
+a:link
+{
+	font-weight: bold;
+	color: darkblue;
+}
+
+a:visited
+{
+	font-weight: bold;
+	color: black;
+}
+
+a:hover
+{
+	font-weight: bold;
+	color: black;
+	text-decoration: underline overline;
+}
+
+.placeDataGrid
+{
+}
+
+.hlavniStrankaAgendy
+{
+	width: 100%;
+	height: 95%;
+}
+.divKolemHlavnihoGridu td
+{
+	height: 100%;
+	font-size: 80%;
+}
+
+div.DIVSessionInfo
+{
+	position: absolute;
+	padding-left: 5px;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 80%;
+	text-align: left;
+}
+
+div.DIVNovinky
+{
+	position: absolute;
+	top: 8px;
+	right: 70px;
+	height: 100%;
+	width: 100%;
+	text-align: right;
+}
+
+div.DIVLogout
+{
+	position: absolute;
+	top: 6px;
+	right: 20px;
+	height: 100%;
+	width: 100%;
+	text-align: right;
+}
+
+div.DIVNazevAplikace
+{
+	FONT-STYLE: italic; 
+	position: absolute;
+	top: 15px;
+	left: 200px;
+	text-align: left;
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 15pt; 
+
+}
+
+span.SPANVerzeAplikace
+{
+	FONT-STYLE: normal; 
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 10pt; 
+}
+
+span.SPANSessionInfo
+{
+	clear: none;
+	padding-right: 0px;
+	padding-left: 0px;
+	font-weight: normal;
+	font-size: 11px;
+	float: left;
+	padding-bottom: 0px;
+	margin: 0px;
+	clip: rect(0px 0px 0px 0px);
+	color: white;
+	padding-top: 2px;
+	font-family: Arial;
+}
+
+td.TDHeaderLogoImg
+{
+	width: 154px;
+	height: 45px;
+}
+div.DIVHeaderLogoImg
+{
+	width: 154px;
+	height: 45px;
+	background-image: url(../../Images/logo_uiv.jpg);
+	background-repeat: no-repeat;
+}
+td.TDHeaderGradient
+{
+	height: 45px;
+}
+
+img.IMGHeaderGradient
+{
+	width: 100%;
+	height: 45px;
+}
+
+td.TDFooterGradient
+{
+	height: 16px;
+}
+image.IMGFooterGradient
+{
+	width: 100%;
+	height: 16px;
+}
+
+table.TablaBezOkrajeAOdsazeni
+{
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	margin: 0px;
+	width: 100%;
+	clip: rect(0px 0px 0px 0px);
+	position: static;
+}
+table.gridSestavaSeznam
+{
+	width: 17cm;
+	border-collapse: collapse;
+
+}
+
+TABLE.hlavniGridAgendy
+{
+	border: 1px solid royalblue;
+	font-size: 11px;
+	width:100%;
+	height: 100%;
+	border-collapse:collapse;
+}
+
+TABLE.hlavniGridAgendy td
+{
+	padding: 1px;
+	border-right: #d8e4f8 1px solid;
+	border-top: #d8e4f8 1px solid;
+	border-left: #d8e4f8 1px solid;
+	border-bottom: #d8e4f8 1px solid;
+}
+
+TR.hlavniGridHeader
+{
+	font-weight: bold;
+	color: aliceblue;
+	background-color: royalblue;
+	background-image: url(../../Images/gridHeadGrad.gif);
+}
+
+TR.trBold
+{
+	font-weight: bold;
+}
+
+TR.hlavniGridItem
+{
+	background-color: aliceblue;
+}
+
+TR.hlavniGridAlternateItem
+{
+	background-color: white;
+}
+
+
+
+TR.hlavniGridItemZarazeniVlastni
+{
+	background-color: #ffccff;
+}
+
+TR.hlavniGridItemRozpracovanoSpravniVlastni
+{
+	background-color: #cdffcd;
+}
+
+TR.hlavniGridItemRozpracovanyZmenyVlastni
+{
+	background-color: #ffee99;
+}
+
+TR.hlavniGridItemUzavrenoVlastni
+{
+	background-color: #81e781;
+}
+
+TR.hlavniGridItemVyrazeniVlastni
+{
+	background-color: lightgrey;
+}
+
+
+
+TR.hlavniGridItemZarazeniCizi
+{
+	background-color: #ffccff;
+}
+
+TR.hlavniGridItemRozpracovanoSpravniCizi
+{
+	background-color: #ff9e9e;
+}
+
+TR.hlavniGridItemZrusenoRozklOdvolAutorem
+{
+	background-color: orangered;
+}
+
+TR.hlavniGridItemNoveRozhPoZrusenoRozklOdvolAutorem
+{
+	background-color: paleturquoise;
+}
+
+TR.hlavniGridItemPodminenaUcinnost
+{
+    background-color: #CC9900;
+}
+
+TR.hlavniGridItemAkreditacePoZadanemDatu
+{
+    background-color: #CC66FF;
+}
+
+TR.hlavniGridItemRozpracovanyZmenyCizi
+{
+	background-color: #ff9e9e;
+}
+
+TR.hlavniGridItemUzavrenoCizi
+{
+	background-color: #ff9e9e;
+}
+
+TR.hlavniGridItemVyrazeniCizi
+{
+	background-color: lightgrey;
+}
+
+
+
+div.BezChyb
+{
+	background-color: #c8ffc8;
+}
+
+div.PChyba
+{
+	background-color: #ffffb0;
+}
+
+div.KChyba
+{
+	background-color: #ff9d9c;
+}
+
+DIV.horniNemennyPanel
+{
+	font-weight: bold;
+	color: red;
+}
+
+DIV.headerDiv
+{
+}
+
+td.headerDiv 
+{
+	color: red;
+	font-weight: bold;
+}
+
+DIV.hlavniGridDecimalItem
+{
+	text-align:right;
+	font-size: 11px;
+}
+
+DIV.hlavniGridDateItem
+{
+	text-align:right;
+	font-size: 11px;
+}
+
+.loginNadpis
+{
+	font-size: 15px;
+}
+.copyright
+{
+	font-size: 10px;
+}
+/* Begin Styly pro stranku Novinky ve verzi */
+p.verzeVeZmenach
+{
+	font-weight: bold;
+	font-size: 15pt;
+	text-decoration: underline;
+	margin-top: 15px;
+}
+
+span.verzeVeZmenachPoznamka
+{
+	font-weight: normal;
+	font-size: 10pt;
+	margin-top: 15px;
+	text-decoration: none;
+}
+
+li.LiVeZmenachB
+{
+	font-weight: bold;
+}
+
+li.LiVeZmenachRed
+{
+	font-weight: bold;
+	color: red;
+}
+
+/* End Styly pro stranku Novinky ve verzi */
+
+tr.vyvojkaNevyresenaVaznaChyba
+{ 
+	font-weight: bold; color: red; 
+}
+
+tr.vyvojkaNevyresenaChyba
+{
+	font-weight: bold;
+	color: purple;
+}
+
+tr.vyvojkaVyresena
+{ 
+	font-weight: bold;
+	color: green; 
+}
+
