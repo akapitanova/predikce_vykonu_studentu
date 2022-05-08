@@ -1,0 +1,6558 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>Dokončíš čtvrtý semestr?</title>
+  </head>
+  <body>
+  <div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold">Dokončíš čtvrtý semestr?</h1>
+    <div class="col-lg-8 mx-auto">
+      <p class="lead mb-4">Na této stránce najdete výsledky predikce dokončení čtvrtého semestru aktuálními studenty čtvrtého semestru bakalářského
+      programu Informatika (akreditace 2015-2020) na Fakultě informačních technologií ČVUT v Praze.  Model použivá klasifikátor Máhodného lesa a má na testovacích
+      datech <i>přesnost</i> <b>88,5 %</b>.</p>
+    </div>
+  </div>
+  <div class="col-lg-8 mt-2 mb-2 mx-auto">
+      <h4 class="text-center">Predikovaná úspěšnost dokončení semestru v závislosti na počtu kreditů studentů</h4>
+       <canvas id="kredity" width="400" height="400"></canvas>
+  </div>
+  <div class="col-lg-8 mt-5 mb-5 mx-auto">
+      <h4 class="text-center">Poměr predikované úspěšnosti</h4>
+      <div class="row">
+      <div class="col-4 mx-auto"><canvas id="semestr_4" width="400" height="400"></canvas></div>
+      </div>
+  </div>
+<div class="col-lg-10 mt-5 mb-5 mx-auto">
+   <h4 class="text-center">Kompletní data predikce úspěšnosti studentů</h4>
+   <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Studium ID</th>
+        <th scope="col">BI-PA1</th>
+        <th scope="col">BI-PAI</th>
+        <th scope="col">BI-CAO</th>
+        <th scope="col">BI-PS1</th>
+        <th scope="col">BI-MLO</th>
+        <th scope="col">BI-ZMA</th>
+        <th scope="col">BI-PA2</th>
+        <th scope="col">BI-DBS</th>
+        <th scope="col">BI-SAP</th>
+        <th scope="col">BI-LIN</th>
+        <th scope="col">BI-AG1</th>
+        <th scope="col">BI-AAG</th>
+        <th scope="col">BI-ZDM</th>
+        <th scope="col">Kredity 1. semestr</th>
+        <th scope="col">Kredity 2. semestr</th>
+        <th scope="col">Kredity 3. semestr</th>
+        <th scope="col">Dokončí semestr?</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+     <tr>
+      <th scope="row">17907506</th>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>24</td>
+      <td>12</td>
+      <td>25</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17951506</th>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>37</td>
+      <td>20</td>
+      <td>0</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18585306</th>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>13</td>
+      <td>16</td>
+      <td>11</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17921206</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>19</td>
+      <td>31</td>
+      <td>8</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17951606</th>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>24</td>
+      <td>19</td>
+      <td>23</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17924406</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>30</td>
+      <td>32</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18598406</th>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>18</td>
+      <td>23</td>
+      <td>23</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17927706</th>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>24</td>
+      <td>28</td>
+      <td>36</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17914806</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>17</td>
+      <td>14</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17914106</th>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>24</td>
+      <td>23</td>
+      <td>27</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17936506</th>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>32</td>
+      <td>26</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18606006</th>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>19</td>
+      <td>23</td>
+      <td>17</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18601106</th>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>-</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>19</td>
+      <td>23</td>
+      <td>19</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17909406</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>24</td>
+      <td>25</td>
+      <td>20</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18583006</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>19</td>
+      <td>19</td>
+      <td>19</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17921706</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>21</td>
+      <td>25</td>
+      <td>20</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17901606</th>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>18</td>
+      <td>20</td>
+      <td>0</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18589806</th>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>28</td>
+      <td>17</td>
+      <td>17</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17947906</th>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>16</td>
+      <td>19</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18600806</th>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>14</td>
+      <td>14</td>
+      <td>14</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18597706</th>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>-</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>-</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>19</td>
+      <td>26</td>
+      <td>26</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18593206</th>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>13</td>
+      <td>18</td>
+      <td>11</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17917606</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>13</td>
+      <td>23</td>
+      <td>22</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18587506</th>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>-</td>
+      <td>2.5</td>
+      <td>-</td>
+      <td>18</td>
+      <td>23</td>
+      <td>22</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18606906</th>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>-</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>-</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>19</td>
+      <td>21</td>
+      <td>22</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18589406</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>30</td>
+      <td>34</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17933906</th>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>26</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17921406</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>-</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>18</td>
+      <td>16</td>
+      <td>23</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17948806</th>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>30</td>
+      <td>30</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18599706</th>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>19</td>
+      <td>17</td>
+      <td>0</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18585006</th>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>15</td>
+      <td>13</td>
+      <td>0</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18583306</th>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>30</td>
+      <td>24</td>
+      <td>19</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17926906</th>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>30</td>
+      <td>25</td>
+      <td>14</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18583806</th>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>19</td>
+      <td>21</td>
+      <td>37</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17952806</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>28</td>
+      <td>31</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18585206</th>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>-</td>
+      <td>2.5</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>19</td>
+      <td>10</td>
+      <td>16</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18591406</th>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>19</td>
+      <td>15</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17945706</th>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>30</td>
+      <td>25</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17938006</th>
+      <td>-</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>13</td>
+      <td>25</td>
+      <td>16</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17952906</th>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>-</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>-</td>
+      <td>25</td>
+      <td>16</td>
+      <td>19</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17927306</th>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>19</td>
+      <td>8</td>
+      <td>14</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18581306</th>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>24</td>
+      <td>16</td>
+      <td>21</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17942906</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>24</td>
+      <td>16</td>
+      <td>26</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17946106</th>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>32</td>
+      <td>27</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17944306</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>24</td>
+      <td>30</td>
+      <td>28</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18588206</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>24</td>
+      <td>16</td>
+      <td>25</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17925106</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>30</td>
+      <td>34</td>
+      <td>31</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18603306</th>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>15</td>
+      <td>12</td>
+      <td>20</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17950706</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>30</td>
+      <td>26</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18584206</th>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>28</td>
+      <td>26</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17923506</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>26</td>
+      <td>31</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17909306</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>24</td>
+      <td>23</td>
+      <td>32</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17914606</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>24</td>
+      <td>30</td>
+      <td>38</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17925306</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>26</td>
+      <td>21</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17927206</th>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>25</td>
+      <td>19</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17926006</th>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>29</td>
+      <td>14</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17951806</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>18</td>
+      <td>16</td>
+      <td>16</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18303206</th>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>35</td>
+      <td>28</td>
+      <td>0</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17921506</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>18</td>
+      <td>25</td>
+      <td>17</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18581906</th>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>27</td>
+      <td>21</td>
+      <td>16</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17933806</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>24</td>
+      <td>31</td>
+      <td>32</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17902606</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>30</td>
+      <td>30</td>
+      <td>28</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17936906</th>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>24</td>
+      <td>26</td>
+      <td>32</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17950406</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>23</td>
+      <td>0</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17905006</th>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>24</td>
+      <td>25</td>
+      <td>10</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17903006</th>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>24</td>
+      <td>34</td>
+      <td>34</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17948506</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>24</td>
+      <td>19</td>
+      <td>0</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18601006</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>30</td>
+      <td>24</td>
+      <td>24</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17951706</th>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>23</td>
+      <td>25</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17932006</th>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>18</td>
+      <td>32</td>
+      <td>39</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17946706</th>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>18</td>
+      <td>24</td>
+      <td>0</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17936706</th>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>25</td>
+      <td>19</td>
+      <td>17</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18067206</th>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>27</td>
+      <td>27</td>
+      <td>17</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17924506</th>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>32</td>
+      <td>30</td>
+      <td>26</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17923306</th>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>19</td>
+      <td>16</td>
+      <td>22</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17904406</th>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>-</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>18</td>
+      <td>15</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18605406</th>
+      <td>-</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>13</td>
+      <td>16</td>
+      <td>19</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18588606</th>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>30</td>
+      <td>36</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18592206</th>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>16</td>
+      <td>11</td>
+      <td>23</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17926806</th>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>24</td>
+      <td>13</td>
+      <td>26</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17922206</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>30</td>
+      <td>30</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17946506</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>30</td>
+      <td>33</td>
+      <td>37</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17915606</th>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>24</td>
+      <td>16</td>
+      <td>31</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18588506</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>14</td>
+      <td>21</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17905806</th>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>30</td>
+      <td>30</td>
+      <td>31</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18602106</th>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>25</td>
+      <td>23</td>
+      <td>22</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17906506</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>32</td>
+      <td>33</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18601606</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>22</td>
+      <td>4</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17944506</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>30</td>
+      <td>32</td>
+      <td>32</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17911306</th>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>18</td>
+      <td>12</td>
+      <td>9</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18595706</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>19</td>
+      <td>20</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18596106</th>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>24</td>
+      <td>8</td>
+      <td>0</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17927006</th>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>25</td>
+      <td>16</td>
+      <td>27</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17940306</th>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>-</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>24</td>
+      <td>25</td>
+      <td>17</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17905506</th>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>20</td>
+      <td>23</td>
+      <td>16</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17932506</th>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>18</td>
+      <td>6</td>
+      <td>29</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17948906</th>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>32</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17918106</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>30</td>
+      <td>30</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17942306</th>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>30</td>
+      <td>34</td>
+      <td>31</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17908006</th>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>19</td>
+      <td>10</td>
+      <td>11</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17915506</th>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>30</td>
+      <td>30</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17908506</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>32</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18589006</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>18</td>
+      <td>38</td>
+      <td>34</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17946206</th>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>23</td>
+      <td>8</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17910106</th>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>32</td>
+      <td>21</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18595806</th>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>13</td>
+      <td>16</td>
+      <td>10</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17943606</th>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>25</td>
+      <td>23</td>
+      <td>9</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17923006</th>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>-</td>
+      <td>24</td>
+      <td>31</td>
+      <td>44</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17917006</th>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>25</td>
+      <td>11</td>
+      <td>21</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17916206</th>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>30</td>
+      <td>32</td>
+      <td>33</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17949806</th>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>25</td>
+      <td>35</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17947506</th>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>25</td>
+      <td>28</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17913006</th>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>30</td>
+      <td>21</td>
+      <td>23</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18639106</th>
+      <td>-</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>24</td>
+      <td>19</td>
+      <td>35</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17936806</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>-</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>24</td>
+      <td>23</td>
+      <td>21</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17905206</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>18</td>
+      <td>25</td>
+      <td>21</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18586906</th>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>24</td>
+      <td>23</td>
+      <td>25</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17935006</th>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>32</td>
+      <td>32</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17913606</th>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>-</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>19</td>
+      <td>16</td>
+      <td>8</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17943306</th>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>-</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>16</td>
+      <td>16</td>
+      <td>11</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17919006</th>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>32</td>
+      <td>31</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18585406</th>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>24</td>
+      <td>16</td>
+      <td>11</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17918806</th>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>30</td>
+      <td>38</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17935806</th>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>30</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17942606</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>24</td>
+      <td>23</td>
+      <td>33</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17930406</th>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>24</td>
+      <td>23</td>
+      <td>15</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18591806</th>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>24</td>
+      <td>28</td>
+      <td>27</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17913806</th>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>30</td>
+      <td>32</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17940206</th>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>30</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17928006</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>30</td>
+      <td>32</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17935706</th>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>26</td>
+      <td>28</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18591706</th>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>13</td>
+      <td>12</td>
+      <td>0</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18600206</th>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>27</td>
+      <td>18</td>
+      <td>21</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17938306</th>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>13</td>
+      <td>12</td>
+      <td>11</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17906406</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>30</td>
+      <td>26</td>
+      <td>31</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17928406</th>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>30</td>
+      <td>32</td>
+      <td>36</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17908606</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>18</td>
+      <td>23</td>
+      <td>27</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17951406</th>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>24</td>
+      <td>23</td>
+      <td>26</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17921006</th>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>38</td>
+      <td>28</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17910406</th>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>20</td>
+      <td>13</td>
+      <td>19</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18604106</th>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>24</td>
+      <td>12</td>
+      <td>10</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17906006</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>30</td>
+      <td>30</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17903106</th>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>24</td>
+      <td>16</td>
+      <td>22</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17902906</th>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>24</td>
+      <td>16</td>
+      <td>4</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17936006</th>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>30</td>
+      <td>23</td>
+      <td>24</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17953306</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>24</td>
+      <td>16</td>
+      <td>0</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17913106</th>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>-</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>12</td>
+      <td>21</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17952306</th>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>25</td>
+      <td>16</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18593706</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>26</td>
+      <td>26</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17929006</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>30</td>
+      <td>26</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17941806</th>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>-</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>16</td>
+      <td>9</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17945806</th>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>-</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>16</td>
+      <td>20</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17904306</th>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>25</td>
+      <td>25</td>
+      <td>22</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18597006</th>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>21</td>
+      <td>12</td>
+      <td>11</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17938806</th>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>25</td>
+      <td>26</td>
+      <td>20</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17902706</th>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>30</td>
+      <td>34</td>
+      <td>35</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17931606</th>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>23</td>
+      <td>20</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18599506</th>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>19</td>
+      <td>10</td>
+      <td>0</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18582206</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>-</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2.0</td>
+      <td>18</td>
+      <td>19</td>
+      <td>27</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18599806</th>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>30</td>
+      <td>6</td>
+      <td>21</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17931106</th>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>18</td>
+      <td>18</td>
+      <td>27</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18039106</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>18</td>
+      <td>17</td>
+      <td>9</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17936206</th>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>30</td>
+      <td>32</td>
+      <td>36</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17924906</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>30</td>
+      <td>32</td>
+      <td>28</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17937106</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>22</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17926606</th>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>30</td>
+      <td>16</td>
+      <td>11</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18590106</th>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>20</td>
+      <td>11</td>
+      <td>18</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17950306</th>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>26</td>
+      <td>31</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17923406</th>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>26</td>
+      <td>38</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18602406</th>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>25</td>
+      <td>12</td>
+      <td>19</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18595006</th>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>13</td>
+      <td>14</td>
+      <td>17</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18597506</th>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>24</td>
+      <td>6</td>
+      <td>20</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17949206</th>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>24</td>
+      <td>28</td>
+      <td>36</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17935306</th>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>30</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17927106</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>24</td>
+      <td>30</td>
+      <td>26</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17903906</th>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>30</td>
+      <td>32</td>
+      <td>28</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17937006</th>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>30</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17945306</th>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>18</td>
+      <td>6</td>
+      <td>0</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17910906</th>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>30</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17908906</th>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>25</td>
+      <td>4</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18601206</th>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>13</td>
+      <td>15</td>
+      <td>19</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17947606</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>32</td>
+      <td>27</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17908806</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>34</td>
+      <td>34</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17904906</th>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>19</td>
+      <td>26</td>
+      <td>28</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17927606</th>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>32</td>
+      <td>21</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17938206</th>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>-</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>24</td>
+      <td>12</td>
+      <td>23</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18595606</th>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>24</td>
+      <td>30</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18600706</th>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>19</td>
+      <td>24</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17901706</th>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>27</td>
+      <td>25</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17948106</th>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>13</td>
+      <td>16</td>
+      <td>5</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17916106</th>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>19</td>
+      <td>18</td>
+      <td>27</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18594306</th>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>19</td>
+      <td>25</td>
+      <td>16</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18594906</th>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>13</td>
+      <td>16</td>
+      <td>5</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17941206</th>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>13</td>
+      <td>20</td>
+      <td>20</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17911606</th>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>24</td>
+      <td>27</td>
+      <td>32</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17915106</th>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>24</td>
+      <td>10</td>
+      <td>11</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18598106</th>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>24</td>
+      <td>28</td>
+      <td>18</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18597906</th>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>18</td>
+      <td>8</td>
+      <td>12</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17928506</th>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>25</td>
+      <td>21</td>
+      <td>31</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18604406</th>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>24</td>
+      <td>22</td>
+      <td>12</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17904606</th>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>18</td>
+      <td>12</td>
+      <td>12</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17948706</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>41</td>
+      <td>37</td>
+      <td>24</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17902406</th>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>24</td>
+      <td>20</td>
+      <td>0</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17943406</th>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>30</td>
+      <td>28</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17941406</th>
+      <td>-</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>-</td>
+      <td>2.5</td>
+      <td>-</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>27</td>
+      <td>16</td>
+      <td>4</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18587406</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>30</td>
+      <td>32</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17913206</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>30</td>
+      <td>32</td>
+      <td>31</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17915906</th>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>18</td>
+      <td>12</td>
+      <td>23</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17928206</th>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>30</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18602806</th>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>19</td>
+      <td>32</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18589906</th>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>-</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>24</td>
+      <td>13</td>
+      <td>15</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17919306</th>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>-</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>30</td>
+      <td>23</td>
+      <td>24</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17910806</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>24</td>
+      <td>17</td>
+      <td>17</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17953406</th>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>30</td>
+      <td>28</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17911706</th>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>13</td>
+      <td>28</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17943006</th>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>13</td>
+      <td>16</td>
+      <td>11</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17920206</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>30</td>
+      <td>32</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18583106</th>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>-</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>-</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>25</td>
+      <td>27</td>
+      <td>20</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17919106</th>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>30</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18605806</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>20</td>
+      <td>30</td>
+      <td>18</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17933606</th>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>30</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17901806</th>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>13</td>
+      <td>17</td>
+      <td>11</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18593506</th>
+      <td>-</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>-</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>24</td>
+      <td>23</td>
+      <td>2</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17916506</th>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>30</td>
+      <td>12</td>
+      <td>0</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18584106</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>23</td>
+      <td>21</td>
+      <td>22</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18582506</th>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>19</td>
+      <td>19</td>
+      <td>0</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17901506</th>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>25</td>
+      <td>14</td>
+      <td>14</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17918406</th>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>-</td>
+      <td>24</td>
+      <td>12</td>
+      <td>14</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17951306</th>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>19</td>
+      <td>25</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18596406</th>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>24</td>
+      <td>23</td>
+      <td>31</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18582406</th>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>16</td>
+      <td>20</td>
+      <td>16</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17915206</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>24</td>
+      <td>23</td>
+      <td>23</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17943206</th>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>25</td>
+      <td>31</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17917106</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>26</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17923206</th>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>24</td>
+      <td>34</td>
+      <td>29</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17923806</th>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>18</td>
+      <td>18</td>
+      <td>17</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17946306</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>30</td>
+      <td>30</td>
+      <td>26</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18600906</th>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>30</td>
+      <td>23</td>
+      <td>18</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17904806</th>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>33</td>
+      <td>26</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17955506</th>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>19</td>
+      <td>23</td>
+      <td>9</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18583206</th>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>26</td>
+      <td>34</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17918506</th>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>19</td>
+      <td>18</td>
+      <td>21</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17939106</th>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>-</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>24</td>
+      <td>21</td>
+      <td>26</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17930606</th>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>18</td>
+      <td>36</td>
+      <td>38</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18599306</th>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>28</td>
+      <td>16</td>
+      <td>9</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17918606</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>30</td>
+      <td>32</td>
+      <td>33</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17911506</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>36</td>
+      <td>32</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18584006</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>32</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17940606</th>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>32</td>
+      <td>36</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17941106</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>24</td>
+      <td>29</td>
+      <td>19</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17903606</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>34</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17937806</th>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>30</td>
+      <td>26</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17953506</th>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>18</td>
+      <td>14</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17933106</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>24</td>
+      <td>22</td>
+      <td>33</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17910006</th>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>23</td>
+      <td>11</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17942206</th>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>18</td>
+      <td>23</td>
+      <td>38</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17932406</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>30</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17953106</th>
+      <td>-</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>13</td>
+      <td>18</td>
+      <td>37</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17904006</th>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>-</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>27</td>
+      <td>20</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17950806</th>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>19</td>
+      <td>17</td>
+      <td>20</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17944606</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>24</td>
+      <td>23</td>
+      <td>19</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17913306</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>26</td>
+      <td>34</td>
+      <td>34</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17904706</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>30</td>
+      <td>32</td>
+      <td>34</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17933706</th>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>18</td>
+      <td>25</td>
+      <td>32</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17902006</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>25</td>
+      <td>20</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17935506</th>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>24</td>
+      <td>14</td>
+      <td>6</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18594006</th>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>30</td>
+      <td>0</td>
+      <td>18</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18581706</th>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>28</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18597106</th>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>24</td>
+      <td>19</td>
+      <td>33</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18581206</th>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>19</td>
+      <td>19</td>
+      <td>10</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17932106</th>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>24</td>
+      <td>19</td>
+      <td>11</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18606706</th>
+      <td>-</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>18</td>
+      <td>19</td>
+      <td>0</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17938106</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>30</td>
+      <td>30</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17922506</th>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>19</td>
+      <td>9</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17952606</th>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>35</td>
+      <td>36</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17910306</th>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>19</td>
+      <td>14</td>
+      <td>5</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17916906</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>18</td>
+      <td>10</td>
+      <td>23</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17937206</th>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>29</td>
+      <td>28</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17942506</th>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>21</td>
+      <td>10</td>
+      <td>35</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17932706</th>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>19</td>
+      <td>14</td>
+      <td>15</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17945206</th>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>30</td>
+      <td>28</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17918906</th>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>32</td>
+      <td>27</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18594806</th>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>23</td>
+      <td>29</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18607206</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>-</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>21</td>
+      <td>24</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17906906</th>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>25</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17943706</th>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>13</td>
+      <td>16</td>
+      <td>15</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18595406</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>21</td>
+      <td>8</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17909106</th>
+      <td>3.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>24</td>
+      <td>23</td>
+      <td>22</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17904206</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>24</td>
+      <td>19</td>
+      <td>16</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18585806</th>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>24</td>
+      <td>12</td>
+      <td>16</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17914306</th>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>34</td>
+      <td>20</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17924206</th>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>30</td>
+      <td>35</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17929306</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>30</td>
+      <td>32</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17937606</th>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>24</td>
+      <td>23</td>
+      <td>10</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17936606</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>29</td>
+      <td>32</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17928806</th>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>18</td>
+      <td>12</td>
+      <td>6</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17934006</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>30</td>
+      <td>16</td>
+      <td>8</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17930706</th>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>30</td>
+      <td>30</td>
+      <td>29</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17903506</th>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4.0</td>
+      <td>19</td>
+      <td>10</td>
+      <td>0</td>
+      <td><i class="bi bi-x text-danger"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18582606</th>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>30</td>
+      <td>30</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17951206</th>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>30</td>
+      <td>32</td>
+      <td>26</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18603906</th>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>30</td>
+      <td>30</td>
+      <td>34</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">18581506</th>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>1.0</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>25</td>
+      <td>27</td>
+      <td>31</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17935606</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>1.5</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>24</td>
+      <td>27</td>
+      <td>32</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+     <tr>
+      <th scope="row">17944906</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.5</td>
+      <td>2.5</td>
+      <td>2.0</td>
+      <td>1.5</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>19</td>
+      <td>23</td>
+      <td>20</td>
+      <td><i class="bi bi-check-lg text-success"></i></td>
+     </tr>
+     
+    </tbody>
+   </table>
+</div>
+<div class="pt-3 text-muted border-top">
+    <p class="text-center">Stránka je součástí bakalářské práce <i>Predikce výkonů studentů</i> Anny Kapitánové &middot; Stránka automaticky vygenerována dne 7. 5. 2022</p>
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js"></script>
+  <script>
+      let kredity_labels = [];
+      for (let i = 0; i < 120; ++i) {
+            kredity_labels.push(i.toString());
+``      }
+      const kredity = document.getElementById('kredity');
+      const chart_kredity = new Chart(kredity, {
+              type: 'line',
+              data: {
+                  labels: kredity_labels,
+                  datasets: [
+                      {
+                          label: 'Dokončí 4. semestr',
+                          data: {'47': 2, '48': 1, '50': 2, '51': 1, '52': 1, '53': 3, '56': 2, '57': 5, '58': 2, '59': 1, '60': 1, '61': 3, '62': 3, '63': 4, '64': 4, '65': 3, '66': 8, '68': 4, '69': 3, '70': 2, '71': 5, '72': 4, '73': 5, '74': 4, '75': 3, '76': 1, '77': 6, '78': 4, '79': 4, '80': 2, '81': 1, '82': 6, '83': 6, '84': 4, '85': 2, '86': 7, '87': 6, '88': 10, '89': 7, '90': 21, '91': 2, '92': 12, '93': 2, '94': 7, '95': 6, '96': 3, '98': 6, '99': 2, '100': 1, '101': 1, '102': 1},
+              fill: false,
+              borderColor: 'rgb(63,241,0)',
+          },
+          {
+              label: 'Nedokončí 4. semestr',
+              data: {'24': 1, '25': 1, '28': 1, '29': 2, '32': 1, '34': 2, '36': 3, '37': 1, '38': 4, '39': 2, '40': 4, '41': 2, '42': 5, '43': 3, '44': 7, '45': 2, '46': 1, '47': 1, '48': 3, '49': 2, '50': 2, '51': 2, '52': 3, '53': 4, '54': 3, '55': 1, '56': 1, '57': 4, '58': 4, '59': 6, '60': 2, '61': 3, '62': 3, '63': 2, '64': 3, '66': 1, '68': 1, '69': 1, '70': 1, '71': 3, '73': 1},
+      fill: false,
+          borderColor: 'rgb(255, 99, 132)',
+      }
+      ]
+      },
+      options: {
+          aspectRatio: 3,
+              scales: {
+              y: {
+                  title: {
+                      display: true,
+                          text: 'Počet studentů'
+                  }
+              },
+              x: {
+                  title: {
+                      display: true,
+                          text:  'Získané kredity'
+                  }
+              }
+          },
+          responsive: true,
+              plugins: {
+              legend: {
+                  position: 'top',
+              },
+          }
+      },
+      });
+
+      const semestr_4 = document.getElementById('semestr_4');
+      const chart_rocnik_2 = new Chart(semestr_4, {
+          type: 'pie',
+          data: {
+              labels: ['Dokončí semestr', 'Nedokončí semestr'],
+              datasets: [
+                  {
+                      label: 'Dataset 1',
+                      data: [206, 99],
+      backgroundColor: ['rgb(63,241,0)',
+          'rgb(255, 99, 132)',
+      ]
+      }
+      ]
+      },
+      options: {
+          responsive: true,
+              plugins: {
+              labels: {
+                  render: 'percentage',
+                      fontSize: 16,
+                      fontColor: '#ffffff',
+                      fontStyle: 'bold',
+              },
+              legend: {
+                  position: 'top',
+              },
+              title: {
+                  display: true,
+                      text: '4. semestr'
+              }
+          }
+      },
+      });
+
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
