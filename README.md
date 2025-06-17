@@ -14,4 +14,4 @@ FIT disponuje daty o studijních výkonech studentů za posledních 11 let. Tato
 ## Predikce_uspechu_studia_bakalar
 
 ## Predikce_znamky_PPpredemtu
-* Ještě není hotové
+
